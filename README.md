@@ -1,0 +1,2 @@
+# mfrdoc
+TeX documents style
