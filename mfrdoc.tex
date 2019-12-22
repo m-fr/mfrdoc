@@ -101,6 +101,9 @@
 \mtdef {img}          {Picture}           {Obrázek}        {}
 \mtdef {tab}          {Table}             {Tabulka}        {}
 \mtdef {v}            {Code}              {Kód}            {}
+\mtdef {warn}         {Warning}           {Varování}       {Varovanie}
+\mtdef {info}         {Info}              {}               {}
+\mtdef {idea}         {Idea}              {TIP}            {}
 
 \def\keepacc#1{\slet{mt:#10:sk}{mt:#1:sk}\slet{mt:#10:\czs}{mt:#1:\czs}}
 \def\keepaccents{\keepacc{figures}\keepacc{verbatims}}
@@ -570,6 +573,35 @@
 \addto\begitems{\vskip.5\parskip \parskip=0pt\relax}
 \addto\enditems{\vskip-.5\parskip}
 \addto\begitems{\slet{normalitem}{item:o}\addto\begitems{\slet{normalitem}{item:-}}}
+
+%%% Labels
+
+\def\warn#1{
+  \vskip.5\iindent
+  \noindent\hbox to1em{\hss\seccfont\locc\styleC\mtext{warn}}
+  \vrule\hskip.25em
+  \vtop{\advance\hsize by-1.5em%
+     \noindent #1 \strut}
+  \vskip.5\iindent
+}
+
+\def\info#1{
+  \vskip.5\iindent
+  \noindent\hbox to1em{\hss\seccfont\locc\styleC\mtext{info}}
+  \vrule\hskip.25em
+  \vtop{\advance\hsize by-1.5em%
+     \noindent #1 \strut}
+  \vskip.5\iindent
+}
+
+\def\idea#1{
+  \vskip.5\iindent
+  \noindent\hbox to1em{\hss\seccfont\locc\styleC\mtext{idea}}
+  \vrule\hskip.25em
+  \vtop{\advance\hsize by-1.5em%
+     \noindent #1 \strut}
+  \vskip.5\iindent
+}
 
 %%% BibItems
 
